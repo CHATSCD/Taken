@@ -1,6 +1,7 @@
 import { useCallback, useMemo } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import useLocalStorage from './useLocalStorage'
+import { SEED_INGREDIENTS } from '../data/seedIngredients'
 import {
   computeItemFoodCost,
   computeSuggestedRetail,
@@ -26,7 +27,7 @@ const KEYS = {
 export function useAppData() {
   const [ingredients, setIngredients] = useLocalStorage<Ingredient[]>(
     KEYS.INGREDIENTS,
-    []
+    SEED_INGREDIENTS
   )
   const [sections, setSections] = useLocalStorage<MenuSection[]>(
     KEYS.SECTIONS,
