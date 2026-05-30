@@ -1,0 +1,22 @@
+# deps
+node_modules/
+.npm
+
+# Next.js
+.next/
+out/
+build/
+
+# env
+.env
+.env.local
+.env.*.local
+
+# database
+prisma/*.db
+prisma/*.db-journal
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
